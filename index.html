@@ -8,7 +8,7 @@
     <title>Todo App</title>
   </head>
   <body>
-    <h1>ToDo App</h1>
+    <h1>Todo App</h1>
 
     <div>
       <form id="form-container" action="submit">
@@ -28,7 +28,25 @@
     <div><input type="text" placeholder="Search"></div>
 
     <div id="list-container">
-
+        <form id="form-container" action="submit">
+            <input maxlength="20" id="title" type="text" placeholder="Title" readonly/>
+            <textarea
+              maxlength="100"
+              name="description"
+              id="description"
+              cols="30"
+              rows="4"
+              placeholder="Description"
+            ></textarea>
+            <div id="footer-container">
+                <label id="date">Date Created:</label>
+                <div>
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </div>
+                </div>
+            </div>
+          </form>
     </div>
   </body>
 </html>

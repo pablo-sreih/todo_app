@@ -27,6 +27,7 @@ h1{
 
 #title{
     padding: 10px;
+    width: 20em;
     background: none;
     outline: none;
     border: none;
@@ -66,4 +67,28 @@ h1{
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+#footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#edit{
+    padding: 5px 20px;
+    background-color: greenyellow;
+    color: green;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+#delete{
+    padding: 5px 15px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
 }
