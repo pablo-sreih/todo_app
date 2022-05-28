@@ -9,29 +9,27 @@
   </head>
   <body>
     <h1>Todo App</h1>
-
+    <div><input id="search" type="text" placeholder="Search"></div>
     <div>
       <form id="form-container" action="submit">
-        <input maxlength="20" id="title" type="text" placeholder="Title"/>
+        <input maxlength="30" id="title" type="text" placeholder="Title"/>
         <textarea
-          maxlength="100"
+          maxlength="150"
           name="description"
           id="description"
           cols="30"
           rows="4"
           placeholder="Description"
         ></textarea>
+        <div><button id="add">Add</button></div>
       </form>
     </div>
-    <div><button id="add">Add</button></div>
-
-    <div><input type="text" placeholder="Search"></div>
-
+    <hr>
     <div id="list-container">
         <form id="form-container" action="submit">
-            <input maxlength="20" id="title" type="text" placeholder="Title" readonly/>
+            <input maxlength="30" id="title" type="text" placeholder="Title" readonly/>
             <textarea
-              maxlength="100"
+              maxlength="150"
               name="description"
               id="description"
               cols="30"
@@ -39,7 +37,7 @@
               placeholder="Description"
             ></textarea>
             <div id="footer-container">
-                <label id="date">Date Created:</label>
+                <label id="date">28 05 2022</label>
                 <div>
                     <button id="edit">Edit</button>
                     <button id="delete">Delete</button>
