@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Todo App</title>
   </head>
+
   <body>
+
     <h1>Todo App</h1>
     <div><input id="search" type="text" placeholder="Search"></div>
     <div>
-      <form id="form-container" action="submit">
+      <form id="form-container">
         <input maxlength="30" id="title" type="text" placeholder="Title"/>
         <textarea
           maxlength="150"
@@ -21,11 +23,13 @@
           rows="4"
           placeholder="Description"
         ></textarea>
-        <div><button id="add">Add</button></div>
+        <div><button type="button" id="add">Add</button></div>
       </form>
     </div>
+
     <hr>
-    <div id="list-container">
+
+    <!-- <div id="list-container">
         <form id="form-container" action="submit">
             <input maxlength="30" id="title" type="text" placeholder="Title" readonly/>
             <textarea
@@ -45,6 +49,10 @@
                 </div>
             </div>
           </form>
-    </div>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+    
   </body>
 </html>
