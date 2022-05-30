@@ -19,7 +19,11 @@ $("#add").click(function () {
             </div>
         </div>
       </form>
-</div>`
-    $("body").append(todo)
-    console.log("success")
+</div>`;
+    if (title == "" || desc == ""){
+        alert("Empty");
+    } else {
+    $("body").append(todo);
+    console.log("success");
+    }
 })
