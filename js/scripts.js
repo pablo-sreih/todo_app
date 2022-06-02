@@ -1,5 +1,3 @@
-$(document).ready(() => {
-
 var id = 0;
 
 
@@ -10,6 +8,7 @@ $("#add").click(() => {
     todo.add_todo();
     console.log(todo)
 })
+
 
 
 class List {
@@ -39,9 +38,12 @@ class List {
             </div>
           </form>`;
 
-
         $("body").append(this.div.append(todo_div));
 
+        $(".delete").click(() => {
+            console.log(this.id);
+            $("#"+ this.id).remove();
+        })
 
         $(".edit").click(() => {
             console.log("clicked")
@@ -51,5 +53,3 @@ class List {
 
     }
     }
-
-})
