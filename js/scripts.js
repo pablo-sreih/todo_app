@@ -40,6 +40,8 @@ class List {
 
         $("body").append(this.div.append(todo_div));
 
+        localStorage.setItem(`title${this.id}`,this.title);
+
         $(".delete").click(() => {
             console.log(this.id);
             $("#"+ this.id).remove();
