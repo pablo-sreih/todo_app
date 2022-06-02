@@ -45,6 +45,7 @@ class List {
         $(".delete").click(() => {
             console.log(this.id);
             $("#"+ this.id).remove();
+            localStorage.removeItem(`title${this.id}`);
         })
 
         $(".edit").click(() => {
