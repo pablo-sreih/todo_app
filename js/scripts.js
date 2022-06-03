@@ -9,6 +9,7 @@ $("#add").click(() => {
     console.log(todo)
 })
 
+
 class List {
     constructor(title, description){
         this.id = Math.floor(Math.random() * Date.now());
@@ -47,6 +48,7 @@ function deleteTodo(id) {
     localStorage.removeItem(id)
 }
 
+
 function editTodo(id) {
     let edit_btn = $("#edit" + id);
     let title = $("#title" + id);
@@ -58,8 +60,10 @@ function editTodo(id) {
         desc.attr("readonly", false);
     };
 
+
     if (edit_btn.text() == "Save"){
         edit_btn.click(() => {
+            localStorage.setItem(id, [title.val(), desc.val()])
             edit_btn.text("Edit");
             title.attr("readonly", true);
             desc.attr("readonly", true);
