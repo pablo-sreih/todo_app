@@ -43,7 +43,7 @@ h1{
     opacity: 30%;
 }
 
-#description{
+.description{
     resize: none;
     padding: 10px;
     background: none;
@@ -52,12 +52,12 @@ h1{
     color: white;
 }
 
-#description::placeholder{
+.description::placeholder{
     color: white;
     opacity: 30%;
 }
 
-#description:focus{
+.description:focus{
     outline: none;
 }
 

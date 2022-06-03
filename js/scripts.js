@@ -10,7 +10,6 @@ $("#add").click(() => {
 })
 
 class List {
-
     constructor(title, description){
         this.id = Math.floor(Math.random() * Date.now());
         this.title = title;
@@ -22,16 +21,15 @@ class List {
 
 
     add_todo() {
-
         let todo_div = 
         `<div id="list-container">
         <form id="form-container">
-        <input maxlength="30" class="title" id="title${this.id}" type="text" placeholder="Title" value = "${this.title}"readonly/>
-        <textarea maxlength="150" name="description" id="description" cols="30" rows="4" placeholder="Description">${this.description}</textarea>
+        <input maxlength="30" class="title" id="title${this.id}" type="text" value = "${this.title}" readonly/>
+        <textarea maxlength="150" class="description" id="desc${this.id}" cols="30" rows="3" readonly>${this.description}</textarea>
         <div id="footer-container">
         <label id="date">${this.time}</label>
         <div>
-        <button type="button" class="edit" id="edit${this.id}">Edit</button>
+        <button type="button" onclick="editTodo(${this.id})" class="edit" id="edit${this.id}">Edit</button>
         <button type="button" onclick="deleteTodo(${this.id})" class="delete">Delete</button>
         </div>
         </div>
@@ -39,23 +37,33 @@ class List {
         </form>`;
 
         $("body").append(this.div.append(todo_div));
-
-        localStorage.setItem(`title${this.id}`,this.title);
-
-        $(".edit").click(() => {
-            console.log("clicked")
-            document.getElementById(`title${this.id}`).removeAttribute("readonly");
-
-        })
-
+        localStorage.setItem(this.id, [this.title, this.description]);
     }
 }
 
 
 function deleteTodo(id) {
     $("#" + id).remove();
+    localStorage.removeItem(id)
 }
 
-function editTodo() {
+function editTodo(id) {
+    let edit_btn = $("#edit" + id);
+    let title = $("#title" + id);
+    let desc = $("#desc" + id);
 
+    if (edit_btn.text() == "Edit"){
+        edit_btn.text("Save");
+        title.attr("readonly", false);
+        desc.attr("readonly", false);
+    };
+
+    if (edit_btn.text() == "Save"){
+        edit_btn.click(() => {
+            edit_btn.text("Edit");
+            title.attr("readonly", true);
+            desc.attr("readonly", true);
+        })
+    };
+    
 }
