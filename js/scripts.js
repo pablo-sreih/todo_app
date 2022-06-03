@@ -12,7 +12,7 @@ $("#add").click(() => {
 class List {
 
     constructor(title, description){
-        this.id = Math.floor(Math.random() * 100);
+        this.id = Math.floor(Math.random() * Date.now());
         this.title = title;
         this.description = description;
         this.div = $(`<div id="${this.id}"></div>`);
@@ -57,5 +57,5 @@ function deleteTodo(id) {
 }
 
 function editTodo() {
-    
+
 }
